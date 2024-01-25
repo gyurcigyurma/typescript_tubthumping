@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "rootDir": "./",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "outDir": "compiled"
+  },
+  "files": ["app.ts"]
+}
