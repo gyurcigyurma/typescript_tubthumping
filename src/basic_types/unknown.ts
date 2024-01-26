@@ -1,15 +1,16 @@
 let userInput2: unknown;
-let userName: string;
+let userName6: string;
 
 userInput2 = 5;
 userInput2 = 'Gunter';
 
 //ERR
-userName = userInput2;
+// @ts-ignore
+userName6 = userInput2;
 
 // however:
 if (typeof userInput2 === 'string') {
-  userName = userInput2;
+  userName6 = userInput2;
 }
 
 //better than any

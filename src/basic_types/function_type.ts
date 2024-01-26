@@ -20,6 +20,7 @@ let combineValues: (a: number, b: number) => number;
 combineValues = add;
 
 // ERR!
+// @ts-ignore
 combineValues = printResult;
 
 addAndHandle(10, 6, (res) => {
