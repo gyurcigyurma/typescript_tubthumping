@@ -1,11 +1,11 @@
 // Function overloads
 
-type Combinable = string | number;
+type CombinableType = string | number;
 type Numerics = number | boolean;
 
-type Universals = Combinable & Numerics;
+type Universals = CombinableType & Numerics;
 
-function add(a: Combinable, b: Combinable) {
+function add(a: CombinableType, b: CombinableType) {
   // type typeguard is here ˇˇˇ
   if (typeof a === 'string' || typeof b === 'string') {
     return a.toString() + b.toString();
@@ -28,7 +28,7 @@ result2.toLowerCase(); //working!
 
 function addTwoParams(a: number, b: number): number;
 function addTwoParams(a: string, b: string): string;
-function addTwoParams(a: Combinable, b: Combinable) {
+function addTwoParams(a: CombinableType, b: CombinableType) {
   if (typeof a === 'string' || typeof b === 'string') {
     return a.toString() + b.toString();
   }

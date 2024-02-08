@@ -1,4 +1,4 @@
-const userInput = <HTMLInputElement>document.getElementById('user-input')!;
+const userInputs = <HTMLInputElement>document.getElementById('user-input')!;
 //OR
 const userInputElement = document.getElementById('user-input');
 

@@ -1,9 +1,6 @@
 type Combinable = string | number;
-type Numeric = number | boolean;
 
-type Universal = Combinable & Numeric;
-
-function add(a: Combinable, b: Combinable) {
+function addNum(a: Combinable, b: Combinable) {
   // type typeguard is here ˇˇˇ
   if (typeof a === 'string' || typeof b === 'string') {
     return a.toString() + b.toString();
@@ -14,19 +11,19 @@ function add(a: Combinable, b: Combinable) {
 /////////////////////////
 
 //@ts-nocheck
-type Admin = {
+type Admins = {
   name: string;
   privileges: string[];
 };
 
-type Employee = {
+type Employees = {
   name: string;
   startDate: Date;
 };
 
-type UnknowEmployee = Employee | Admin;
+type UnknowEmployee = Employees | Admins;
 
-const em1: UnknowEmployee = {
+const emp1: UnknowEmployee = {
   name: 'Bela',
   privileges: ['read'],
   startDate: new Date(),
@@ -43,7 +40,7 @@ function printEmployeeInformation(emp: UnknowEmployee) {
     console.log('Start date: ' + emp.startDate);
   }
 }
-printEmployeeInformation(em1);
+printEmployeeInformation(emp1);
 
 //////////////////
 
